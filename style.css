@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #E4E4E4;
+    /* font-family: Montserrat; */
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+@font-face{
+    font-family: Montserrat;
+    src:url("yucca\Montserrat.ttf");
+}
+
+nav{
+    height: 9vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    /* background-color: white; */
+    z-index: 10;
+    
+}
+
+.navleft{
+    height: 100%;
+    width: 100%;
+    padding-left: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navright{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding-left: 200px;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 50px;
+    
+}
+/* 
+
+
+.overlay-parent{
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: pink;
+    overflow: hidden;
+    }
+    
+    .overlay{
+        height: 190%;
+        width: 200%;
+        background-color: red;
+        position: absolute;
+        transition: all ease 0.8s;
+        left: -60%;
+        top: -280%;
+        rotate: 0deg;
+        scale: 1.5;
+        pointer-events: none;
+        }
+        
+        .page{
+            height: 100%;
+            width: 100%;
+            background-color: yellow;
+            }*/
+
+.hero1-mouse{
+    height: 300px;
+    display: none;
+    width: 200px;
+    z-index: 20;
+    position: fixed;
+    transform: translate(20px, 20px);
+
+
+}
+.hero1-mouse video{
+    display: none;
+    /* height: 300px; */
+    /* width: 200px; */
+    border-radius: 10px;
+    pointer-events: none;
+    
+}
+
+.mf{
+    border-radius: 100%;
+    background-color: blue;
+    height: 15px;
+    width: 15px;
+    position: fixed;
+    display: none;
+    z-index: 20;
+}
+
+.hero-parent{
+    height: 100%;
+    width: 100%;
+    /* background-color: rebeccapurple; */
+    /* overflow: hidden; */
+}
+.hero{
+    height: 100%;
+    width: 100%;
+
+    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;; */
+    font-family: Montserrat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.hero p{
+    font-size: 150px;
+    font-weight: 1000;
+    padding-top: 10vh;
+    text-align: center;
+}
+.hero2{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    /* background-color: saddlebrown; */
+    z-index: 1;
+}
+
+.hero2 iframe{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    scale: 1.2;
+    z-index: 1;
+}
+
+
+.hero3{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+}
+
+.h3txt{
+    height: 80%;
+    width: 80%;
+    /* background-color: rebeccapurple; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Montserrat;
+    
+}
+
+.h3txt p:nth-child(2){
+    font-size: 70px;
+    font-weight: 800;
+    letter-spacing: -3px;
+}
+
+.hero4{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 180px;
+    justify-content: center;
+}
+.h4up{
+    width: 100%;
+    height: auto;
+    padding-left: 20px;
+
+}
+.h4up p{
+    font-weight: 300px;
+}
+
+.h4dw{
+    letter-spacing: -3px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.h4dw p{
+    font-size: 150px;
+    font-weight: 800;
+}
+
+.hero5{
+    height: 200%;
+    width: 100%;
+    display: grid;
+    /* grid-template-columns: auto auto; */
+    padding: 15px;
+    gap: 15px;
+    grid-template-areas: 
+    "h5card1 h5card2"
+    "h5card3 h5card4";
+    /* background-color: darkorchid; */
+}
+
+/* .h5card{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    } */
+.h5card1{
+    grid-area: h5card1;
+    /* background-color: blue; */
+    border-radius: 10px;
+    overflow: hidden;
+    object-fit: cover;
+    position: relative;
+}
+.h5card2{
+    grid-area: h5card2;
+    /* background-color: darkorchid; */
+    border-radius: 10px;
+    overflow: hidden;
+    object-fit: cover;
+    position: relative;
+}
+.h5card3{
+    grid-area: h5card3;
+    border-radius: 10px;
+    /* background-color: darkorchid; */
+    overflow: hidden;
+    object-fit: cover;
+    position: relative;
+}
+.h5card4{
+    grid-area: h5card4;
+    border-radius: 10px;
+    /* background-color: darkorchid; */
+    overflow: hidden;
+    object-fit: cover;
+    position: relative;
+}
+.h5card1 img{
+    border-radius: 10px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+}
+.h5card1 video, .h5card2 video, .h5card3 video, .h5card4 video{
+    border-radius: 10px;
+    height: auto;
+    position: absolute;
+    width: 85%;
+    transform: translate(8%, 50%);
+    display: none;
+    /* background-color: rgb(2, 144, 0); */
+}
+.h5card1 source{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    /* background-color: aquamarine; */
+}
+/* .h5card2 video {
+    border-radius: 10px;
+    position: absolute;
+    height: 100%;
+    width: 85%;
+    transform: translate(8%, 50%);
+
+} */
+.h5card2 img{
+    border-radius: 10px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+}
+.h5card3 img{
+    border-radius: 10px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+}
+.h5card4 img{
+    border-radius: 10px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+}
+
+
+.services{
+    height: 150%;
+    width: 100%;
+    padding-top: 250px;
+    padding-left: 15px;
+}
+
+.services-up{
+    padding-bottom: 10px;
+}
+
+.services-mid{
+    font-family: Montserrat;
+    letter-spacing: -4px;
+    font-size: 100px;
+    font-weight: 800;
+    text-align: center;
+}
+/* .sm1{
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+
+
+}
+.sm1a{
+    background-color: red;
+    height: 298px;
+    width: 400px;
+    overflow: hidden;
+    z-index: 4;
+    display: none;
+}
+.sm1a video{
+    height: 300px;
+    width: 400px;
+    z-index: 5;
+} */
+.sm1 p{
+    /* : center; */
+}
